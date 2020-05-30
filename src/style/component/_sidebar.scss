@@ -1,0 +1,89 @@
+.sidenav{
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    left: -1000px;
+    // Responsive
+    @include media-breakpoint-up(md) {
+        width: 300px;
+        left: 0;
+    }
+
+    &.active{
+        width: 300px;
+        top: 3rem;
+        left: 0;
+    }
+
+    background: $sidebar_bg;
+    box-shadow: 14px -2px 20px 0px #696969;
+    .sidenav_brand{
+        height: 126px;
+        background: $white;
+        padding-top: 29px;
+        & a{
+            font-size: 48px;
+            color: $sidebar_brand_color;
+        }
+    }
+    .sidenav_menu{
+        // height: 370px;
+        .sidenav_menu_items{
+            & li{
+                list-style: none;
+                & a{
+                    height: 62px;
+                    background: linear-gradient(to top,#2E363A,#333A3E);
+                    color: $white;
+                }
+                & a:hover,& .selected{
+                    background: linear-gradient(to top,#18A4A2,#30BBB9);
+                }
+            }
+        }
+    }
+    .sidenav_filter_menu_items{
+        & li{
+            & a{
+                color: $secondary;
+            }
+            & a:hover, & .active{
+                color: $white;
+            }
+        }
+    }
+    .sidenav_social_links{
+        margin-top: 60px;
+        .sidenav_social_links_items{
+            & li{
+                list-style: none;
+                margin-left: 1rem;
+                position: relative;
+                .fb{
+                    position: relative;
+                    color: $fb;
+                }
+                .twitter{
+                    color: $twitter;
+                }
+                .google{
+                    color: $google;
+                }
+                .linkdin{
+                    color: $linkdin;
+                }
+            }
+            & li::before{
+                content: "";
+                width: 80%;
+                height: 70%;
+                background: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                z-index: -1;
+            }
+        }
+    }
+}

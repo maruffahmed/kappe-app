@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import {Container} from 'react-bootstrap' 
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import WorksContextProvider from "./context/WorksContext"
+import Sidebar from './component/layout/navbar/Sidebar'
+import Works from './component/works/Works'
+import Contactinfo from './component/layout/Contactinfo'
+import Sidenavtoggle from './component/layout/SidenavToogle'
+function App() { 
+    const [SideNavActive, setSideNavActive] = useState(false)
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    useEffect(() => {
+        console.log(SideNavActive);
+    }, [SideNavActive])
+
+
+    return (
+    <Container fluid className = "px-0">
+        <WorksContextProvider>
+
+            <Router>
+                <Sidebar isactive={SideNavActive}/>
+                <main>
+
+                    <Switch>
+                        <Route exact path="/" component={Works}/>
+                        {/* <Route exact path="/works/:filterId" component={Works}/> */}
+                    </Switch>
+                    <Sidenavtoggle sidenavtoggle = {setSideNavActive}/>
+                    <Contactinfo/>
+                </main>
+
+            </Router>
+
+        </WorksContextProvider>
+
+    </Container>
+    );
 }
 
 export default App;

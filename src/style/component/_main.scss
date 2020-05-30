@@ -1,0 +1,13 @@
+main{
+    width: 100%;
+    background : $white;
+    min-height: 100vh;
+    float: right;
+    position: relative;
+    display: block;
+    z-index: -1;
+    // Responsive
+    @include media-breakpoint-up(md) {
+        width: calc(100% - 300px);
+    }
+}

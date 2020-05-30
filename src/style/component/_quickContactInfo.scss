@@ -1,0 +1,20 @@
+.quickContactInfo{
+    position: fixed;
+    top: 0;
+    right: 0;
+    .quickContactInfo_button{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        cursor: pointer;
+    }
+    .quickContactInfo_details{
+        position: absolute;
+        bottom: -9rem;
+        right: 0;
+        width: 20rem;
+        background: rgba($color: #000000, $alpha: 0.8);
+        padding: 0.8rem;
+        color: $white;
+    }
+}
