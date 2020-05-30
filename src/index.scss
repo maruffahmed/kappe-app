@@ -4,10 +4,10 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 @import "./style/var",
+        "./style/component/sidenavtoggle",
         "./style/component/sidebar",
         "./style/component/main",
         "./style/component/quickContactInfo",
-        "./style/component/sidenavtoggle",
         "./style/component/works";
 
 *{

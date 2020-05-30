@@ -20,7 +20,7 @@ function App() {
         <WorksContextProvider>
 
             <Router>
-                <Sidebar isactive={SideNavActive}/>
+                <Sidebar isactive={SideNavActive} sidenavtoggle = {setSideNavActive}/>
                 <main>
 
                     <Switch>
