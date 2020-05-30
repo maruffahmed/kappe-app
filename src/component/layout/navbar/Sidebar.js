@@ -14,11 +14,14 @@ function Sidebar({isactive,sidenavtoggle}){
     return(
         <div className={sidenvaclass}>
             <div className="sidenav_brand d-flex justify-content-center">
+
                 <div className="closesidenav d-flex justify-content-center align-items-center bg-primary text-light d-block d-md-none" onClick={() => sidenavtoggle(prev => !prev)}>
                     <FontAwesomeIcon icon={faArrowLeft}/>
                 </div>
+
                 <Link to="/">kappe</Link>
             </div>
+            
             <SideMenu/>
             <Filter/>
             <SocialLink/>

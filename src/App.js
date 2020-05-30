@@ -6,6 +6,9 @@ import Sidebar from './component/layout/navbar/Sidebar'
 import Works from './component/works/Works'
 import Contactinfo from './component/layout/Contactinfo'
 import Sidenavtoggle from './component/layout/SidenavToogle'
+import About from './component/about/About'
+
+
 function App() { 
     const [SideNavActive, setSideNavActive] = useState(false)
 
@@ -24,11 +27,16 @@ function App() {
                 <main>
 
                     <Switch>
-                        <Route exact path="/" component={Works}/>
-                        {/* <Route exact path="/works/:filterId" component={Works}/> */}
+                        <Route exact path="/">
+                            <Works/>
+                            <Contactinfo/>
+                        </Route>
+
+                        <Route path="/about" component={About}/>
+
                     </Switch>
+
                     <Sidenavtoggle sidenavtoggle = {setSideNavActive}/>
-                    <Contactinfo/>
                 </main>
 
             </Router>
