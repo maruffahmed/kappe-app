@@ -1,21 +1,21 @@
-.about{
+.about,.single-work{
     background : $secondary;
     min-height: 100vh;
     // padding: 3rem;
-    & .about-content{
+    & .about-content, .single-work-content{
         display: grid;
         grid-template-columns: 1fr;
         // Responsive
         @include media-breakpoint-up(lg) {
             grid-template-columns: 1fr 1fr;
         }
-        & .about-left{
+        & .about-left,.single-work-left{
             // Responsive
             @include media-breakpoint-up(lg) {
                 padding-right: 1rem;
                 border-right: 1px solid #dddddd;
             }
-            & .about_thumbnail{
+            & .about_thumbnail,.single-work_thumbnail{
                 height: 302px;
                 width: 100%;
                 & img{
@@ -25,12 +25,12 @@
                     object-position: center;
                 }
             }
-            & .about_desctiption{
+            & .about_desctiption,.single-work_desctiption{
                 border-bottom: 1px solid #dddddd;
             }
-            & .team_members{
+            & .team_members,.related_project{
 
-                & .team_member_thumbnail{
+                & .team_member_thumbnail,.related_project_thumbnail{
                     & img{
                         width: 100%;
                     }
@@ -38,7 +38,7 @@
             }
         }
 
-        & .about-right{
+        & .about-right,.single-work-right{
             // Responsive
             @include media-breakpoint-up(lg) {
                 padding-left: 1rem;
@@ -53,7 +53,7 @@
                 }
             }
 
-            & .services{
+            & .services,.project-features{
                 & ul{
 
                     & li{

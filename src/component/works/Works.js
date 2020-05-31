@@ -4,6 +4,8 @@ import Workitem from './Workitem'
 import {WorksContext} from '../../context/WorksContext';
 
 function Works() {
+    // Title
+    document.title = "Home"
     const {works} = useContext(WorksContext);
     return (
         <div className = "works">

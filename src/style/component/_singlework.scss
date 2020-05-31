@@ -1,0 +1,12 @@
+.single-work{
+    & .single-work-content{
+        & .single-work-left{
+            & .single-work_thumbnail{
+                height: 560px;
+            }
+        }
+    }
+
+        & .single-work-right{ 
+        }
+}
