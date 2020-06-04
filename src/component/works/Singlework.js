@@ -5,19 +5,24 @@ import Singleworkright from './Singleworkright'
 import { WorksContext } from '../../context/WorksContext'
 
 function Singlework() {
-
     const {works} = useContext(WorksContext)
     const {id} = useParams();
-    const [selectedWork] = works.filter(work => work.id === parseInt(id))
-    // Title
-    // document.title = selectedWork.title
+    // const [select, setSelect] = useState(null);
 
+    const [selectedWork] = works.filter(work => work.id === parseInt(id))
+    // setSelect(works.filter(work => work.id === parseInt(id)))
+
+    // console.log(selectedWork);
     return (
         <div className="single-work p-3">
-            <div className="single-work-content p-3 bg-white">  
-                <Singleworkleft work = {selectedWork}/>
-                <Singleworkright work = {selectedWork}/>
-            </div>
+            {
+                works.length && (
+                    <div className="single-work-content p-3 bg-white">  
+                        <Singleworkleft work = {selectedWork}/>
+                        <Singleworkright work = {selectedWork}/>
+                    </div>
+                )
+            }
         </div>
     )
 }

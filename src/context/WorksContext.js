@@ -1,19 +1,12 @@
 import React, { createContext, useState,useEffect } from 'react'
-import axios from 'axios'
+import data from '../data/data'
 export const WorksContext = createContext()
 
 function WorksContextProvider(props){
     const [works, setWorks] = useState([]);
 
     const getWorksData = () => {
-        axios.get('data/works.json')
-        .then(res => JSON.parse(JSON.stringify(res.data)))
-        .then(data => {
-            setWorks(data.works);
-        })
-        .catch(err => {
-            console.log(err)
-        })
+        setWorks(data)
     }
 
     useEffect(() => {

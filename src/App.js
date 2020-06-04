@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {Container} from 'react-bootstrap' 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import WorksContextProvider from "./context/WorksContext"
@@ -13,11 +13,6 @@ import Singlework from './component/works/Singlework'
 
 function App() { 
     const [SideNavActive, setSideNavActive] = useState(false)
-
-
-    useEffect(() => {
-        console.log(SideNavActive);
-    }, [SideNavActive])
 
 
     return (

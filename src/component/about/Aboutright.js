@@ -1,5 +1,6 @@
 import React from 'react'
 import {ProgressBar,Card} from 'react-bootstrap'
+import team2 from '../../img/team/team2.jpg'
 
 function Aboutright(){
     return(
@@ -24,7 +25,7 @@ function Aboutright(){
                 <h5>Testimonials</h5>
                 <Card border="primary p-0 m-0">
                     <Card.Header className="bg-primary p-0 d-flex align-items-center">
-                        <img src="./img/team/girl-919048_1280.jpg" alt="thumbnail" className="testimonials_thumnail p-0 m-0"/>
+                        <img src={team2} alt="thumbnail" className="testimonials_thumnail p-0 m-0"/>
                         <p className="m-0 small text-light ml-3"><i>Collis Ta’eed - CEO at Envato</i></p>
                     </Card.Header>
                     <Card.Body>

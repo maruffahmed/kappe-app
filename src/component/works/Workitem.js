@@ -7,7 +7,7 @@ function Workitem({work}) {
     return (
         
         <div className="work_thumbail">
-            <img src={`img/${work.thumbnail}`} alt={work.title}/>
+            <img src={work.thumbnail} alt={work.title}/>
             
             <Link to={`/work/${work.id}`} className="work_thumbnail_filter d-flex flex-column justify-content-center align-items-center">
                 <h4>
